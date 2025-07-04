@@ -57,3 +57,54 @@ erDiagram
         datetime created_at
         datetime updated_at
     }
+
+````
+## API Endpoints
+
+### Authentication
+| Method | Endpoint          | Description                     | Auth Required |
+|--------|-------------------|---------------------------------|---------------|
+| POST   | `/sessions`       | User login                     | No            |
+
+### Password Management
+| Method | Endpoint               | Description                          | Auth Required |
+|--------|------------------------|--------------------------------------|---------------|
+| POST   | `/password/forgot`     | Request password reset token         | No            |
+| POST   | `/password/reset`      | Reset password using token           | No            |
+
+### Users
+| Method | Endpoint          | Description                     | Auth Required |
+|--------|-------------------|---------------------------------|---------------|
+| GET    | `/users`          | List all users                  | Yes           |
+| POST   | `/users`          | Create new user                 | No            |
+
+### Profile
+| Method | Endpoint          | Description                     | Auth Required |
+|--------|-------------------|---------------------------------|---------------|
+| GET    | `/profile`        | Get current user profile        | Yes           |
+| PUT    | `/profile`        | Update profile                  | Yes           |
+
+### Authors
+| Method | Endpoint               | Description                          | Auth Required |
+|--------|------------------------|--------------------------------------|---------------|
+| GET    | `/authors`             | List all authors                    | Yes           |
+| GET    | `/authors/:id`         | Get specific author                 | Yes           |
+| POST   | `/authors`             | Create new author                   | Yes           |
+| PUT    | `/authors/:id`         | Update author                       | Yes           |
+| DELETE | `/authors/:id`         | Delete author                       | Yes           |
+| PATCH  | `/authors/avatar/:id`  | Update author avatar (image upload) | Yes           |
+
+### Articles
+| Method | Endpoint                     | Description                          | Auth Required |
+|--------|------------------------------|--------------------------------------|---------------|
+| GET    | `/articles`                  | List all articles                    | Yes           |
+| GET    | `/articles/:id`              | Get specific article                 | Yes           |
+| GET    | `/articles/author/:author_id`| List articles by author              | Yes           |
+| POST   | `/articles`                  | Create new article                   | Yes           |
+| PUT    | `/articles/:id`              | Update article                       | Yes           |
+| DELETE | `/articles/:id`              | Delete article                       | Yes           |
+
+### Notes:
+1. All authenticated endpoints require JWT token in `Authorization` header
+2. Article status values: `draft`, `submitted`, `approved`, `rejected`
+3. File upload endpoints accept multipart/form-data
