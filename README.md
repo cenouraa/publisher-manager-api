@@ -1,9 +1,10 @@
 # Article Management API
 
-![Node.js](https://img.shields.io/badge/Node.js-18.x-green)
-![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue)
-![TypeORM](https://img.shields.io/badge/TypeORM-0.3.x-orange)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15.x-blue)
+![Node.js](https://img.shields.io/badge/Node.js-22.9.0-green)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.8.3-blue)
+![TypeORM](https://img.shields.io/badge/TypeORM-0.2.45-orange)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-(Driver%208.16)-blue)
+![Express](https://img.shields.io/badge/Express-4.18.2-lightgrey)
 
 A RESTful API for managing academic articles and authors, developed for the Web Systems Development course.
 
